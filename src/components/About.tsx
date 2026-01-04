@@ -9,7 +9,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-32 h-32 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
-                  <span className="font-display text-5xl text-primary">JD</span>
+                  <span className="font-display text-5xl text-primary">MH</span>
                 </div>
               </div>
             </div>

@@ -44,7 +44,7 @@ const Navigation = () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          JD
+          MH
         </a>
 
         {/* Desktop Navigation */}

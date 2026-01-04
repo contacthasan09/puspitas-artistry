@@ -25,6 +25,7 @@ const projects = [
     tags: ['Next.js', 'OpenAI', 'Tailwind'],
     color: 'hsl(280, 70%, 55%)',
   },
+
 ];
 
 const Work = () => {
