@@ -18,7 +18,7 @@ const Contact = () => {
   // Social links with your actual URLs
   const socialLinks = {
     github: 'https://github.com/contacthasan09',
-    linkedin: 'https://www.linkedin.com/in/gulam-hasan-a4a55938a/',
+    linkedin: 'https://www.linkedin.com/in/mahdi-hasan-a4a55938a/',
     twitter: 'https://twitter.com/yourusername', // Update with your Twitter URL
     facebook: 'https://facebook.com/mahdi.hasan.388315', // Update with your Facebook URL
     dribbble: 'https://dribbble.com/yourusername', // Update with your Dribbble URL
