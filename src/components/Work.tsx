@@ -4,7 +4,7 @@ const projects = [
   {
     title: 'E-Commerce Platform',
     description: 'A modern shopping experience with seamless checkout flow and real-time inventory management.',
-    tags: ['React', 'Node.js', 'Stripe'],
+    tags: ['Flutter', 'Node.js','MongoDB', 'Stripe', 'REST API', 'Authentication', 'Push Notifications', 'Admin Panel'],
     color: 'hsl(38, 92%, 50%)',
     images: [
       '/projects/ecommerce-platform/ecommerce1.jpg',
@@ -21,7 +21,7 @@ const projects = [
     {
     title: 'Doctor Appointment Booking',
     description: 'A modern healthcare platform enabling patients to book, manage, and track medical appointments seamlessly',
-    tags: ['Fluter', 'Node.js', 'Stripe', 'MongoDB'],
+    tags: ['Flutter', 'Firebase', 'Stripe', 'Zegocloud', 'REST API', 'Authentication', 'Push Notifications', 'Calendar Integration', 'Telemedicine'],
     color: 'hsl(38, 92%, 50%)',
     images: [
       
@@ -36,7 +36,7 @@ const projects = [
   {
     title: 'SaaS Dashboard',
     description: 'Analytics dashboard with interactive charts, user management, and automated reporting.',
-    tags: ['TypeScript', 'D3.js', 'PostgreSQL'],
+    tags: ['React', 'JavaScript', 'D3.js', 'Node.js', 'PostgreSQL', 'REST API', 'Authentication'],
     color: 'hsl(200, 80%, 50%)',
     images: [
       '/projects/saas-dashboard/analytics.png',
@@ -47,7 +47,7 @@ const projects = [
   {
     title: 'Mobile Banking App',
     description: 'Secure fintech application with biometric authentication and instant transfers.',
-    tags: ['React Native', 'Firebase', 'Plaid'],
+    tags: ['Flutter', 'Firebase', 'Plaid', 'REST API', 'Authentication', 'Payment Integration'],
     color: 'hsl(150, 60%, 45%)',
     images: [
      // '/projects/banking/login.png',
@@ -64,7 +64,7 @@ const projects = [
   {
     title: 'AI Content Studio',
     description: 'Content generation platform powered by machine learning with intuitive editing tools.',
-    tags: ['Next.js', 'OpenAI', 'Tailwind'],
+    tags: ['Next.js', 'OpenAI', 'Tailwind', 'REST API', 'Auth System'],
     color: 'hsl(280, 70%, 55%)',
     images: [
     //  '/projects/ai/editor.png',
