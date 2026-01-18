@@ -27,6 +27,12 @@ const projects = [
       
       '/projects/appointment/appointment_screen1.png',
       '/projects/appointment/appointment_screen2.png',
+      '/projects/appointment/appointment_screen3.png',
+      '/projects/appointment/appointment_screen4.png',
+      '/projects/appointment/appointment_screen5.png',
+      '/projects/appointment/appointment_screen6.png',
+
+
     //  '/projects/ecommerce/cart.png',
     //  '/projects/ecommerce/checkout.png',
     //  '/projects/ecommerce/admin-panel.png'
@@ -72,6 +78,45 @@ const projects = [
     //  '/projects/ai/generate.png',
     ],
   },
+
+{
+  title: 'Social & Chat App',
+  description: 'Real-time social networking app with one-to-one and group chat, media sharing, and user profiles.',
+  tags: [
+    'Flutter',
+    'Node.js',
+    'Socket.io',
+    'MongoDB',
+    'Firebase',
+    'REST API',
+    'JWT Authentication',
+    'WebRTC'
+  ],
+  color: 'hsl(280, 70%, 55%)',
+  images: [
+    '/projects/social/social_1.PNG',
+    '/projects/social/social_2.png',
+    '/projects/social/social_3.png',
+    '/projects/social/social_4.png',
+  ],
+},
+
+
+      {
+    title: 'Ride Sharing App',
+    description: 'A modern ride-sharing platform enabling users to book, manage, and track rides seamlessly',
+    tags: ['Flutter', 'Firebase', 'Stripe', 'REST API', 'Authentication', 'Push Notifications', 'Real-time GPS Tracking', 'In-app Chat'],
+    color: 'hsl(38, 92%, 50%)',
+    images: [
+      
+      '/projects/ride_sharing/ride1.jpg',
+      '/projects/ride_sharing/ride3.jpg',
+    //  '/projects/ecommerce/cart.png',
+    //  '/projects/ecommerce/checkout.png',
+    //  '/projects/ecommerce/admin-panel.png'
+    ],
+  },
+
 ];
 
 const Work = () => {
