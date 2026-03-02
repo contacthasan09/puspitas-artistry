@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 
 const About = () => {
-  const profileImage = '/images/profile.jpg'; // Update this path
+  const profileImage = '/images/puspita-profile.jpg'; // Update this path
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
-  const [countedStats, setCountedStats] = useState({ years: 0, projects: 0, clients: 0 });
+  const [countedStats, setCountedStats] = useState({ medals: 0, creations: 0, years: 0 });
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -32,7 +32,7 @@ const About = () => {
   useEffect(() => {
     if (!isVisible) return;
 
-    const targetStats = { years: 3, projects: 35, clients: 25 };
+    const targetStats = { medals: 12, creations: 85, years: 5 };
     const duration = 2000; // 2 seconds
     const steps = 60;
     const increment = duration / steps;
@@ -43,9 +43,9 @@ const About = () => {
       const progress = currentStep / steps;
 
       setCountedStats({
-        years: Math.floor(targetStats.years * progress),
-        projects: Math.floor(targetStats.projects * progress),
-        clients: Math.floor(targetStats.clients * progress)
+        medals: Math.floor(targetStats.medals * progress),
+        creations: Math.floor(targetStats.creations * progress),
+        years: Math.floor(targetStats.years * progress)
       });
 
       if (currentStep >= steps) {
@@ -67,6 +67,21 @@ const About = () => {
         <div className={`absolute -bottom-40 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl transition-all duration-1000 delay-300 ${
           isVisible ? 'opacity-100' : 'opacity-0 -translate-x-40'
         }`} />
+        
+        {/* Archery target decorative element */}
+        <div className={`absolute top-1/4 right-1/4 w-64 h-64 border-2 border-primary/10 rounded-full transition-all duration-1500 ${
+          isVisible ? 'scale-100 opacity-30' : 'scale-0 opacity-0'
+        }`}>
+          <div className="absolute inset-4 border-2 border-primary/10 rounded-full" />
+          <div className="absolute inset-8 border-2 border-primary/10 rounded-full" />
+          <div className="absolute inset-12 border-2 border-primary/20 rounded-full" />
+          <div className="absolute inset-16 border-2 border-primary/30 rounded-full" />
+        </div>
+        
+        {/* Paint splash decorative element */}
+        <div className={`absolute bottom-1/4 left-1/4 w-48 h-48 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 rounded-full blur-2xl transition-all duration-1000 delay-500 ${
+          isVisible ? 'scale-100 opacity-40' : 'scale-0 opacity-0'
+        }`} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -78,7 +93,7 @@ const About = () => {
                 <>
                   <img
                     src={profileImage}
-                    alt="Profile"
+                    alt="Puspita Hasan - National Archery Player & Artist"
                     className={`w-full h-full object-cover transition-all duration-1000 ${
                       isVisible ? 'scale-100 opacity-100' : 'scale-110 opacity-0'
                     } group-hover:scale-105`}
@@ -97,7 +112,7 @@ const About = () => {
                     <div className={`relative w-32 h-32 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center transition-all duration-1000 ${
                       isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
                     } group-hover:scale-110`}>
-                      <span className="font-display text-5xl text-primary">MH</span>
+                      <span className="font-display text-5xl text-primary">PH</span>
                       
                       {/* Pulse rings */}
                       <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-ping" />
@@ -107,12 +122,26 @@ const About = () => {
                 </>
               )}
 
-              {/* Floating particles animation */}
+              {/* Floating particles animation - arrows and paint drops */}
               <div className="absolute inset-0 pointer-events-none">
-                {[...Array(12)].map((_, i) => (
+                {[...Array(6)].map((_, i) => (
                   <div
-                    key={i}
-                    className="absolute w-1 h-1 bg-primary/30 rounded-full animate-float"
+                    key={`arrow-${i}`}
+                    className="absolute text-primary/20 text-xs animate-float"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                      animationDelay: `${i * 0.3}s`,
+                      animationDuration: `${4 + Math.random() * 3}s`
+                    }}
+                  >
+                    ➜
+                  </div>
+                ))}
+                {[...Array(6)].map((_, i) => (
+                  <div
+                    key={`paint-${i}`}
+                    className="absolute w-2 h-2 rounded-full bg-primary/20 animate-float"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
@@ -153,43 +182,72 @@ const About = () => {
               }`}
               style={{ transitionDelay: '200ms' }}
             >
-              Turning Ideas Into{' '}
+              Where Precision Meets{' '}
               <span className="text-gradient bg-gradient-to-r from-primary via-primary/80 to-primary bg-[length:200%_100%] bg-clip-text text-transparent animate-gradient">
-                Digital Reality
+                Creativity
               </span>
             </h2>
             
             <div className="space-y-6">
-              {[
-                "With over 3 years of experience in full-stack and cross-platform app development, I've had the privilege of working with startups, agencies, and established brands to bring their digital visions to life across web, mobile, and desktop platforms.",
-                "I believe great backend architecture is invisible — it feels intuitive, seamless, and delightful. My approach combines impressive UI/UX design with robust backend engineering, ensuring every application not only looks stunning but performs flawlessly at scale.",
-                "When I'm not coding, you'll find me exploring new backend technologies, contributing to open-source projects, or enjoying a good cup of coffee while architecting new database schemas."
-              ].map((paragraph, index) => (
-                <p 
-                  key={index}
-                  className={`text-muted-foreground font-body leading-relaxed transition-all duration-1000 ${
-                    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                  }`}
-                  style={{ transitionDelay: `${400 + index * 200}ms` }}
-                >
-                  {paragraph}
-                </p>
-              ))}
+              <p 
+                className={`text-muted-foreground font-body leading-relaxed transition-all duration-1000 ${
+                  isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                }`}
+                style={{ transitionDelay: '400ms' }}
+              >
+                I am Puspita Hasan — a National Archery Player representing Bangladesh, and a Creative Artist pouring my soul into handprint art and crafts. Two worlds, one heart. On the field, I chase the perfect shot with unwavering focus. In my studio, I chase the perfect stroke, leaving fragments of my imagination on canvas.
+              </p>
+              
+              <p 
+                className={`text-muted-foreground font-body leading-relaxed transition-all duration-1000 ${
+                  isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                }`}
+                style={{ transitionDelay: '600ms' }}
+              >
+                My journey is a beautiful paradox — the stillness before releasing an arrow mirrors the pause before my brush meets the canvas. Through <span className="text-primary font-medium">Puspita's Artistry</span>, I share handcrafted pieces that carry the rawness of human touch and the elegance of artistic expression.
+              </p>
+              
+              <p 
+                className={`text-muted-foreground font-body leading-relaxed transition-all duration-1000 ${
+                  isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                }`}
+                style={{ transitionDelay: '800ms' }}
+              >
+                When I'm not training for national championships or creating new artwork, you'll find me exploring new art techniques, connecting with fellow creators, or simply enjoying a quiet moment with a cup of tea — because every masterpiece begins with a moment of peace.
+              </p>
             </div>
 
-            {/* Skills tags */}
+            {/* Skills tags - dual categories */}
             <div className="flex flex-wrap gap-2 mt-8">
+              <span className="px-3 py-1.5 text-xs bg-primary/10 text-primary rounded-full border border-primary/20 font-semibold">
+                ⚡ Archery
+              </span>
               {[
-                'Full-Stack Development',
-                'Cross-Platform Apps',
-                'Backend Architecture',
-                'UI/UX Design',
-                'Real-time Systems',
-                'API Development',
-                'Database Design',
-                'Cloud Deployment',
-                'Maps Integration',
-                'Secure Payment Integrations'
+                'National Player',
+                'Precision Shooting',
+                'Competition Ready',
+                'Mental Focus',
+                'Team Bangladesh'
+              ].map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1.5 text-xs bg-primary/10 text-primary rounded-full border border-primary/20 hover:bg-primary/15 transition-colors cursor-default"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+            
+            <div className="flex flex-wrap gap-2 mt-3">
+              <span className="px-3 py-1.5 text-xs bg-primary/10 text-primary rounded-full border border-primary/20 font-semibold">
+                🎨 Artistry
+              </span>
+              {[
+                'Handprint Art',
+                'Mixed Media',
+                'ArtCraft',
+                'Custom Creations',
+                'Puspita\'s Artistry'
               ].map((skill) => (
                 <span
                   key={skill}
@@ -210,22 +268,41 @@ const About = () => {
             >
               <div className="text-center">
                 <p className="font-display text-4xl text-primary font-semibold">
+                  {countedStats.medals}+
+                </p>
+                <p className="text-muted-foreground text-sm mt-1">National Medals</p>
+              </div>
+              <div className="text-center">
+                <p className="font-display text-4xl text-primary font-semibold">
+                  {countedStats.creations}+
+                </p>
+                <p className="text-muted-foreground text-sm mt-1">Art Creations</p>
+              </div>
+              <div className="text-center">
+                <p className="font-display text-4xl text-primary font-semibold">
                   {countedStats.years}+
                 </p>
-                <p className="text-muted-foreground text-sm mt-1">Years Experience</p>
+                <p className="text-muted-foreground text-sm mt-1">Years of Passion</p>
               </div>
-              <div className="text-center">
-                <p className="font-display text-4xl text-primary font-semibold">
-                  {countedStats.projects}+
-                </p>
-                <p className="text-muted-foreground text-sm mt-1">Projects Completed</p>
-              </div>
-              <div className="text-center">
-                <p className="font-display text-4xl text-primary font-semibold">
-                  {countedStats.clients}+
-                </p>
-                <p className="text-muted-foreground text-sm mt-1">Happy Clients</p>
-              </div>
+            </div>
+            
+            {/* Facebook page link */}
+            <div 
+              className={`mt-6 text-center transition-all duration-1000 ${
+                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+              }`}
+              style={{ transitionDelay: '1200ms' }}
+            >
+              <a 
+                href="https://www.facebook.com/PuspitaZaman.2360" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+              >
+                <span className="text-sm">Follow my journey on</span>
+                <span className="font-semibold">Puspita's Artistry</span>
+                <span className="text-lg">→</span>
+              </a>
             </div>
           </div>
         </div>
