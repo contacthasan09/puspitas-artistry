@@ -32,7 +32,7 @@ const About = () => {
   useEffect(() => {
     if (!isVisible) return;
 
-    const targetStats = { medals: 12, creations: 85, years: 5 };
+    const targetStats = { medals: 15, creations: 50, years: 6 };
     const duration = 2000; // 2 seconds
     const steps = 60;
     const increment = duration / steps;
@@ -195,7 +195,7 @@ const About = () => {
                 }`}
                 style={{ transitionDelay: '400ms' }}
               >
-                I am Puspita Hasan — a National Archery Player representing Bangladesh, and a Creative Artist pouring my soul into handprint art and crafts. Two worlds, one heart. On the field, I chase the perfect shot with unwavering focus. In my studio, I chase the perfect stroke, leaving fragments of my imagination on canvas.
+                I am Puspita Zaman — a National Archery Player representing Bangladesh, and a Creative Artist pouring my soul into handprint art and crafts. Two worlds, one heart. On the field, I chase the perfect shot with unwavering focus. In my studio, I chase the perfect stroke, leaving fragments of my imagination on canvas.
               </p>
               
               <p 

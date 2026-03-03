@@ -150,12 +150,12 @@ const Skills = () => {
           <div className="inline-flex items-center gap-8 p-4 px-8 rounded-full bg-background border border-border">
             <div className="flex items-center gap-2">
               <Trophy className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium">12+ National Medals</span>
+              <span className="text-sm font-medium">15+ National Medals</span>
             </div>
             <div className="w-1 h-4 bg-border" />
             <div className="flex items-center gap-2">
               <Palette className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium">85+ Art Creations</span>
+              <span className="text-sm font-medium">50+ Art Creations</span>
             </div>
             <div className="w-1 h-4 bg-border" />
             <div className="flex items-center gap-2">

@@ -24,7 +24,7 @@ const Hero = () => {
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.1] mb-8 opacity-0 animate-fade-up stagger-2">
             <span className="text-foreground">I'm</span>
             <br />
-            <span className="text-gradient">Puspita Hasan</span>
+            <span className="text-gradient">Puspita Zaman</span>
           </h1>
           
           <p className="font-body text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-fade-up stagger-3">
