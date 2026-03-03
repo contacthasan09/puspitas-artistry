@@ -2,134 +2,88 @@ import ProjectCard from '@/components/ProjectCard';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A modern shopping experience with seamless checkout flow and real-time inventory management.',
-    tags: ['Flutter', 'Node.js','MongoDB', 'Stripe', 'REST API', 'Authentication', 'Push Notifications', 'Admin Panel'],
+    title: 'Hand-Painted Bags Collection',
+    description: 'Each bag transformed into a unique canvas — featuring hand-drawn illustrations, intricate patterns, and personalized artwork on premium fabric.',
+    tags: ['Handprint Art', 'Fabric Painting', 'Illustration', 'Custom Design', 'Mixed Media', 'Puspita\'s Artistry'],
     color: 'hsl(38, 92%, 50%)',
     images: [
       '/projects/bag/bag1.jpg',
-       '/projects/bag/bag2.jpg',
-        '/projects/bag/bag3.jpg',
-      //  '/projects/ecommerce/dashboard.png',
-    //  '/projects/ecommerce/product-page.png',
-    //  '/projects/ecommerce/cart.png',
-    //  '/projects/ecommerce/checkout.png',
-    //  '/projects/ecommerce/admin-panel.png'
+      '/projects/bag/bag3.jpg',
+      '/projects/bag/bag2.jpg',
+     // '/projects/bag/bag4.jpg',
     ],
   },
-
-    {
-    title: 'Doctor Appointment Booking',
-    description: 'A modern healthcare platform enabling patients to book, manage, and track medical appointments seamlessly',
-    tags: ['Flutter', 'Firebase', 'Stripe', 'Zegocloud', 'REST API', 'Authentication', 'Push Notifications', 'Calendar Integration', 'Telemedicine'],
+  {
+    title: 'Hand-Painted Dress Collection',
+    description: 'Wearable art pieces where fabric becomes a canvas. Each dress features original hand-drawn motifs, cultural patterns, and artistic expressions.',
+    tags: ['Textile Art', 'Fabric Painting', 'Wearable Art', 'Hand Illustration', 'Custom Fashion', 'ArtCraft'],
     color: 'hsl(38, 92%, 50%)',
     images: [
-      
       '/projects/dress/dress1.jpg',
       '/projects/dress/dress2.jpg',
       '/projects/dress/dress3.jpg',
-
-
-
-    //  '/projects/ecommerce/cart.png',
-    //  '/projects/ecommerce/checkout.png',
-    //  '/projects/ecommerce/admin-panel.png'
     ],
   },
-
   {
-    title: 'SaaS Dashboard',
-    description: 'Analytics dashboard with interactive charts, user management, and automated reporting.',
-    tags: ['React', 'JavaScript', 'D3.js', 'Node.js', 'PostgreSQL', 'REST API', 'Authentication'],
+    title: 'Painted Eyewear Collection',
+    description: 'Unique artistic frames where glass becomes a medium. Hand-painted designs on eyewear — from delicate florals to abstract expressions.',
+    tags: ['Glass Painting', 'Eyewear Art', 'Detail Work', 'Precision Art', 'Mixed Media', 'Custom Design'],
     color: 'hsl(200, 80%, 50%)',
     images: [
       '/projects/glass/glass1.jpg',
-    //  '/projects/saas-dashboard/users.png',
       '/projects/glass/glass2.jpg',
       '/projects/glass/glass3.jpg',
     ],
   },
   {
-    title: 'Mobile Banking App',
-    description: 'Secure fintech application with biometric authentication and instant transfers.',
-    tags: ['Flutter', 'Firebase', 'Plaid', 'REST API', 'Authentication', 'Payment Integration'],
+    title: 'Paper Art Collection',
+    description: 'Delicate handprint art on paper — where simplicity meets creativity. Each piece tells a story through strokes, textures, and emotions.',
+    tags: ['Paper Art', 'Handprint', 'Illustration', 'Sketch Art', 'Mixed Media', 'Minimalist'],
     color: 'hsl(150, 60%, 45%)',
     images: [
-     // '/projects/banking/login.png',
-    //  '/projects/banking/dashboard.png',
-    //  '/projects/banking/transfer.png',
-    //  '/projects/banking/history.png',
       '/projects/paper/paper1.jpg',
       '/projects/paper/paper2.jpg',
       '/projects/paper/paper3.jpg',
       '/projects/paper/paper4.jpg',
-
     ],
   },
-/*  {
-    title: 'AI Content Studio',
-    description: 'Content generation platform powered by machine learning with intuitive editing tools.',
-    tags: ['Next.js', 'OpenAI', 'Tailwind', 'REST API', 'Auth System'],
-    color: 'hsl(280, 70%, 55%)',
-    images: [
-    //  '/projects/ai/editor.png',
-    //  '/projects/ai/templates.png',
-    //  '/projects/ai/generate.png',
-    ],
-  }, */
-
-/*{
-  title: 'Social & Chat App',
-  description: 'Real-time social networking app with one-to-one and group chat, media sharing, and user profiles.',
-  tags: [
-    'Flutter',
-    'Node.js',
-    'Socket.io',
-    'MongoDB',
-    'Firebase',
-    'REST API',
-    'JWT Authentication',
-    'WebRTC'
-  ],
-  color: 'hsl(280, 70%, 55%)',
-  images: [
-    '/projects/social/social_1.PNG',
-    '/projects/social/social_2.png',
-    '/projects/social/social_3.png',
-    '/projects/social/social_4.png',
-  ],
-}, */
-
-
- /*     {
-    title: 'Ride Sharing App',
-    description: 'A modern ride-sharing platform enabling users to book, manage, and track rides seamlessly',
-    tags: ['Flutter', 'Firebase', 'Stripe', 'REST API', 'Authentication', 'Push Notifications', 'Real-time GPS Tracking', 'In-app Chat'],
-    color: 'hsl(38, 92%, 50%)',
-    images: [
-      
-      '/projects/ride_sharing/ride1.jpg',
-      '/projects/ride_sharing/ride3.jpg',
-    //  '/projects/ecommerce/cart.png',
-    //  '/projects/ecommerce/checkout.png',
-    //  '/projects/ecommerce/admin-panel.png'
-    ],
-  }, */
-
 ];
 
 const Work = () => {
   return (
     <section id="work" className="py-32 relative">
-      <div className="container mx-auto px-6">
+      {/* Artistic background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        
+        {/* Floating paint drops */}
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-2 h-2 bg-primary/20 rounded-full animate-float"
+            style={{
+              left: `${10 + (i * 15)}%`,
+              top: `${20 + (i * 8)}%`,
+              animationDelay: `${i * 0.5}s`,
+              animationDuration: `${4 + i}s`
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-primary font-body text-sm uppercase tracking-[0.3em] mb-4">
-            Selected Work
+            Artwork Collection
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-semibold text-foreground leading-tight">
-            Projects I'm{' '}
-            <span className="text-gradient">Proud Of</span>
+          <h2 className="font-display text-4xl md:text-5xl font-semibold text-foreground leading-tight mb-4">
+            Creativity{' '}
+            <span className="text-gradient">On Canvas</span>
           </h2>
+          <p className="text-muted-foreground font-body text-lg">
+            Each piece is handcrafted with love — from bags to paper, every stroke tells a story.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -144,6 +98,22 @@ const Work = () => {
               index={index}
             />
           ))}
+        </div>
+
+        {/* Call to action for Puspita's Artistry */}
+        <div className="text-center mt-16">
+          <div className="inline-flex items-center gap-2 p-4 px-8 rounded-full bg-background border border-border">
+            <span className="text-muted-foreground">Follow more creations at</span>
+            <a 
+              href="https://facebook.com/PuspatasArtistry" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-semibold text-primary hover:text-primary/80 transition-colors"
+            >
+              Puspita's Artistry
+            </a>
+            <span className="text-primary text-lg">→</span>
+          </div>
         </div>
       </div>
     </section>
