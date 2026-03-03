@@ -7,9 +7,9 @@ const projects = [
     tags: ['Flutter', 'Node.js','MongoDB', 'Stripe', 'REST API', 'Authentication', 'Push Notifications', 'Admin Panel'],
     color: 'hsl(38, 92%, 50%)',
     images: [
-      '/projects/ecommerce-platform/ecommerce1.jpg',
-       '/projects/ecommerce-platform/ecommerce2.jpg',
-        '/projects/ecommerce-platform/ecommerce3.jpg',
+      '/projects/bag/bag1.jpg',
+       '/projects/bag/bag2.jpg',
+        '/projects/bag/bag3.jpg',
       //  '/projects/ecommerce/dashboard.png',
     //  '/projects/ecommerce/product-page.png',
     //  '/projects/ecommerce/cart.png',
@@ -25,12 +25,10 @@ const projects = [
     color: 'hsl(38, 92%, 50%)',
     images: [
       
-      '/projects/appointment/appointment_screen1.png',
-      '/projects/appointment/appointment_screen2.png',
-      '/projects/appointment/appointment_screen3.png',
-      '/projects/appointment/appointment_screen4.png',
-      '/projects/appointment/appointment_screen5.png',
-      '/projects/appointment/appointment_screen6.png',
+      '/projects/dress/dress1.jpg',
+      '/projects/dress/dress2.jpg',
+      '/projects/dress/dress3.jpg',
+
 
 
     //  '/projects/ecommerce/cart.png',
@@ -45,9 +43,10 @@ const projects = [
     tags: ['React', 'JavaScript', 'D3.js', 'Node.js', 'PostgreSQL', 'REST API', 'Authentication'],
     color: 'hsl(200, 80%, 50%)',
     images: [
-      '/projects/saas-dashboard/analytics.png',
+      '/projects/glass/glass1.jpg',
     //  '/projects/saas-dashboard/users.png',
-      '/projects/saas-dashboard/reports.png',
+      '/projects/glass/glass2.jpg',
+      '/projects/glass/glass3.jpg',
     ],
   },
   {
@@ -60,14 +59,14 @@ const projects = [
     //  '/projects/banking/dashboard.png',
     //  '/projects/banking/transfer.png',
     //  '/projects/banking/history.png',
-      '/projects/banking/banking1.png',
-      '/projects/banking/banking2.png',
-      '/projects/banking/banking3.png',
-      '/projects/banking/banking4.png',
+      '/projects/paper/paper1.jpg',
+      '/projects/paper/paper2.jpg',
+      '/projects/paper/paper3.jpg',
+      '/projects/paper/paper4.jpg',
 
     ],
   },
-  {
+/*  {
     title: 'AI Content Studio',
     description: 'Content generation platform powered by machine learning with intuitive editing tools.',
     tags: ['Next.js', 'OpenAI', 'Tailwind', 'REST API', 'Auth System'],
@@ -77,9 +76,9 @@ const projects = [
     //  '/projects/ai/templates.png',
     //  '/projects/ai/generate.png',
     ],
-  },
+  }, */
 
-{
+/*{
   title: 'Social & Chat App',
   description: 'Real-time social networking app with one-to-one and group chat, media sharing, and user profiles.',
   tags: [
@@ -99,10 +98,10 @@ const projects = [
     '/projects/social/social_3.png',
     '/projects/social/social_4.png',
   ],
-},
+}, */
 
 
-      {
+ /*     {
     title: 'Ride Sharing App',
     description: 'A modern ride-sharing platform enabling users to book, manage, and track rides seamlessly',
     tags: ['Flutter', 'Firebase', 'Stripe', 'REST API', 'Authentication', 'Push Notifications', 'Real-time GPS Tracking', 'In-app Chat'],
@@ -115,7 +114,7 @@ const projects = [
     //  '/projects/ecommerce/checkout.png',
     //  '/projects/ecommerce/admin-panel.png'
     ],
-  },
+  }, */
 
 ];
 
