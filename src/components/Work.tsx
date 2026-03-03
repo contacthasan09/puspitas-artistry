@@ -1,18 +1,19 @@
 import ProjectCard from '@/components/ProjectCard';
 
 const projects = [
-  {
-    title: 'Hand-Painted Bags Collection',
-    description: 'Each bag transformed into a unique canvas — featuring hand-drawn illustrations, intricate patterns, and personalized artwork on premium fabric.',
-    tags: ['Handprint Art', 'Fabric Painting', 'Illustration', 'Custom Design', 'Mixed Media', 'Puspita\'s Artistry'],
-    color: 'hsl(38, 92%, 50%)',
-    images: [
-      '/projects/bag/bag1.jpg',
-      '/projects/bag/bag3.jpg',
-      '/projects/bag/bag2.jpg',
-     // '/projects/bag/bag4.jpg',
-    ],
-  },
+  
+  
+{
+  title: 'National Archery Journey',
+  description: 'Representing Bangladesh on the national stage — moments of focus, precision, and passion captured in action. Every arrow tells a story of dedication and discipline.',
+  tags: ['National Athlete', 'Compound Bow', 'Competition', 'Team Bangladesh', 'Precision Sport', 'Archery'],
+  color: 'hsl(38, 92%, 50%)',
+  images: [
+    '/projects/archery/archery1.jpeg',
+    '/projects/archery/archery2.jpeg',
+  ],
+},
+
   {
     title: 'Hand-Painted Dress Collection',
     description: 'Wearable art pieces where fabric becomes a canvas. Each dress features original hand-drawn motifs, cultural patterns, and artistic expressions.',
