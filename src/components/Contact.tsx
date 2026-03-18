@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Mail, MapPin, Send, Facebook, Instagram, Target, Globe, Heart } from 'lucide-react';
+import { Mail, MapPin, Send, Facebook, Instagram, Heart, Users, Globe, Award } from 'lucide-react';
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -11,15 +11,16 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Contact info
-  const emailAddress = 'mail-puspitazaman15@gmail.com';
-  const location = 'Tongi, Gazipur, Bangladesh';
+  // TODO: Update with Mitu's information
+  const emailAddress = 'your-email@example.com';
+  const location = 'Dhaka, Bangladesh';
 
-  // Social links with Puspita's actual URLs
+  // TODO: Add Mitu's social links here
   const socialLinks = {
-    facebook: 'https://www.facebook.com/aona.khan.39',
-    instagram: 'https://instagram.com/puspita_60.60',
-    worldArchery: 'https://www.worldarchery.sport/profile/41840/puspita-zaman/statistics?category=Compound%20Women',
+    facebook: 'https://web.facebook.com/nurun.nahar.mitu.637805', // Added the Facebook URL you provided
+    instagram: '', // Add Instagram
+    linkedin: '', // Add LinkedIn if needed
+    website: '', // Add personal website if needed
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -49,8 +50,8 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Using Formspree (Free service for form submissions)
-      const response = await fetch('https://formspree.io/f/mbdlpwwo', {
+      // TODO: Update Formspree endpoint for Mitu
+      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,7 +60,7 @@ const Contact = () => {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          _subject: `New Message from ${formData.name} - Puspita's Portfolio`,
+          _subject: `New Message from ${formData.name} - Mitu's Portfolio`,
         }),
       });
 
@@ -79,34 +80,34 @@ const Contact = () => {
 
   // Function to open email client
   const openEmailClient = () => {
-    const subject = 'Art/Archery Inquiry - Puspita\'s Portfolio';
-    const body = `Hello Puspita,\n\nI came across your portfolio and would like to discuss...\n\nBest regards,\n[Your Name]`;
+    const subject = 'Inquiry - Nurun Nahar Mitu Portfolio';
+    const body = `Hello Mitu,\n\nI came across your portfolio and would like to connect with you regarding...\n\nBest regards,\n[Your Name]`;
     
     const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink, '_blank');
   };
 
-  // Social media icon components
+  // Social media icon components - ready for Mitu's links
   const socialIcons = [
     {
       name: 'Facebook',
       icon: <Facebook className="h-5 w-5" />,
       url: socialLinks.facebook,
-      label: 'Puspita\'s Artistry',
+      label: 'Nurun Nahar Mitu',
       color: 'hover:text-blue-600 dark:hover:text-blue-400'
     },
     {
       name: 'Instagram',
       icon: <Instagram className="h-5 w-5" />,
       url: socialLinks.instagram,
-      label: '@puspita_60.60',
+      label: '@username', // Update with her Instagram
       color: 'hover:text-pink-600 dark:hover:text-pink-400'
     },
     {
-      name: 'World Archery',
-      icon: <Target className="h-5 w-5" />,
-      url: socialLinks.worldArchery,
-      label: 'Official Profile',
+      name: 'Karate Profile',
+      icon: <Award className="h-5 w-5" />,
+      url: '', // Add karate federation/profile link
+      label: 'Athlete Profile',
       color: 'hover:text-primary'
     },
   ];
@@ -126,29 +127,28 @@ const Contact = () => {
       />
       
       <section id="contact" className="py-32 relative overflow-hidden">
-        {/* Decorative background elements */}
+        {/* Decorative background elements - neutral design */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-20 w-64 h-64 border-2 border-primary/10 rounded-full" />
           <div className="absolute bottom-20 left-20 w-48 h-48 bg-primary/5 rounded-full blur-3xl" />
           
-          {/* Archery target rings */}
+          {/* Subtle geometric patterns */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-primary/5 rounded-full" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-primary/5 rounded-full" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] border border-primary/10 rounded-full" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-primary font-body text-sm uppercase tracking-[0.3em] mb-4">
-                Connect With Me
+                Get In Touch
               </p>
               <h2 className="font-display text-4xl md:text-5xl font-semibold text-foreground leading-tight mb-6">
-                Let's Create{' '}
-                <span className="text-gradient">Together</span>
+                Let's{' '}
+                <span className="text-gradient">Connect</span>
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto">
-                Whether you're interested in a custom art piece, want to collaborate, 
+                Whether you're interested in karate training, collaboration opportunities, 
                 or just want to say hello — I'd love to hear from you.
               </p>
             </div>
@@ -188,7 +188,7 @@ const Contact = () => {
                       {location}
                     </p>
                     <p className="text-xs text-muted-foreground/70 mt-1">
-                      Available for collaborations worldwide
+                      Daffodil International University
                     </p>
                   </div>
                 </div>
@@ -221,24 +221,24 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* World Archery Profile Highlight */}
+                {/* Fresh Anonna Highlight */}
                 <div className="p-5 bg-gradient-to-br from-primary/10 to-transparent rounded-lg border border-primary/20">
                   <div className="flex items-center gap-3 mb-3">
-                    <Globe className="h-5 w-5 text-primary" />
+                    <Users className="h-5 w-5 text-primary" />
                     <h3 className="font-display font-semibold text-foreground">
-                      World Archery Profile
+                      Fresh Anonna
                     </h3>
                   </div>
                   <p className="text-sm text-muted-foreground mb-3">
-                    View my official statistics, rankings, and competition history
+                    Social worker making a difference through community service and youth empowerment
                   </p>
                   <a 
-                    href={socialLinks.worldArchery}
+                    href="https://web.facebook.com/freshanonna" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary text-sm font-medium hover:gap-3 transition-all"
                   >
-                    View Profile <span>→</span>
+                    Learn More <span>→</span>
                   </a>
                 </div>
 
@@ -249,7 +249,7 @@ const Contact = () => {
                     Response Time
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    I typically respond within 24-48 hours. For art commissions or archery collaborations, 
+                    I typically respond within 24-48 hours. For karate training inquiries or social work collaborations, 
                     please mention the details in your message.
                   </p>
                 </div>
@@ -295,20 +295,27 @@ const Contact = () => {
                     onChange={handleInputChange}
                     rows={5}
                     className="w-full px-4 py-3 rounded-lg bg-card border border-border focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all text-foreground placeholder:text-muted-foreground resize-none"
-                    placeholder="Tell me about your project, commission idea, or just say hello..."
+                    placeholder="Tell me about your karate training interest, collaboration idea, or just say hello..."
                     required
                   />
                 </div>
                 
-                {/* Quick interest buttons */}
+                {/* Quick interest buttons - updated for Mitu */}
                 <div className="flex flex-wrap gap-2">
                   <span className="text-xs text-muted-foreground">I'm interested in:</span>
                   <button
                     type="button"
-                    onClick={() => setFormData(prev => ({ ...prev, message: prev.message + (prev.message ? ' ' : '') + '#ArtCommission' }))}
+                    onClick={() => setFormData(prev => ({ ...prev, message: prev.message + (prev.message ? ' ' : '') + '#KarateTraining' }))}
                     className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
                   >
-                    🎨 Art Commission
+                    🥋 Karate Training
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setFormData(prev => ({ ...prev, message: prev.message + (prev.message ? ' ' : '') + '#SocialWork' }))}
+                    className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
+                  >
+                    ❤️ Social Work
                   </button>
                   <button
                     type="button"
@@ -316,13 +323,6 @@ const Contact = () => {
                     className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
                   >
                     🤝 Collaboration
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setFormData(prev => ({ ...prev, message: prev.message + (prev.message ? ' ' : '') + '#ArcheryEvent' }))}
-                    className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
-                  >
-                    🏹 Archery Event
                   </button>
                 </div>
 

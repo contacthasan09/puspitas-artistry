@@ -1,4 +1,4 @@
-import { ExternalLink, Github, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
+import { ExternalLink, ChevronLeft, ChevronRight, Play, Pause, Heart, Award, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect, useRef } from 'react';
 
@@ -138,7 +138,7 @@ const ProjectCard = ({
                       }}
                       className={`transition-all duration-300 ${
                         idx === currentImageIndex 
-                          ? 'bg-white scale-125' 
+                          ? 'bg-primary scale-125' 
                           : 'bg-white/50 hover:bg-white/80'
                       }`}
                       style={{
@@ -158,12 +158,18 @@ const ProjectCard = ({
             )}
           </>
         ) : (
-          /* Fallback gradient background with floating animation */
+          /* Fallback gradient background with karate-themed animation */
           <div 
             className="w-full h-full flex items-center justify-center relative overflow-hidden"
             style={{ background: `linear-gradient(135deg, ${color}15 0%, ${color}05 100%)` }}
           >
-            {/* Floating orb animation */}
+            {/* Karate belt stripes animation */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-1/3 left-0 w-full h-1 bg-primary transform -rotate-12 group-hover:rotate-0 transition-all duration-1000" />
+              <div className="absolute bottom-1/3 left-0 w-full h-1 bg-primary transform rotate-12 group-hover:rotate-0 transition-all duration-1000" />
+            </div>
+            
+            {/* Floating orbs */}
             <div 
               className="w-20 h-20 rounded-full opacity-20 group-hover:opacity-30 transition-all duration-1000 absolute top-1/4 left-1/4 group-hover:scale-150 group-hover:translate-x-4"
               style={{ background: color }}
@@ -173,7 +179,7 @@ const ProjectCard = ({
               style={{ background: color }}
             />
             
-            {/* Main orb */}
+            {/* Main orb with karate fist symbol */}
             <div 
               className="w-20 h-20 rounded-full relative z-10 group-hover:scale-110 transition-all duration-500 flex items-center justify-center"
               style={{ 
@@ -181,12 +187,12 @@ const ProjectCard = ({
                 boxShadow: `0 10px 30px ${color}40`
               }}
             >
-              <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm" />
+              <span className="text-3xl text-white/90">🥋</span>
             </div>
           </div>
         )}
 
-        {/* Project action buttons - Only show when hovering the card (not image) */}
+        {/* Project action buttons */}
         <div className={`absolute inset-0 bg-background/80 backdrop-blur-sm transition-all duration-300 flex items-center justify-center gap-4 ${
           isHoveringCard && !isHoveringImage ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}>
@@ -194,6 +200,7 @@ const ProjectCard = ({
             variant="outline" 
             size="icon" 
             className="rounded-full hover:scale-110 hover:-translate-y-1 transition-all duration-300"
+            title="View Project"
           >
             <ExternalLink className="h-4 w-4" />
           </Button>
@@ -201,8 +208,9 @@ const ProjectCard = ({
             variant="outline" 
             size="icon" 
             className="rounded-full hover:scale-110 hover:-translate-y-1 transition-all duration-300"
+            title="Learn More"
           >
-            <Github className="h-4 w-4" />
+            <Heart className="h-4 w-4" />
           </Button>
         </div>
       </div>
@@ -211,6 +219,19 @@ const ProjectCard = ({
       <div className="p-6 relative overflow-hidden">
         {/* Animated underline effect */}
         <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-border to-transparent group-hover:via-primary/50 transition-all duration-500" />
+        
+        {/* Category indicator badge */}
+        <div className="flex items-center gap-2 mb-2">
+          {title.includes('Karate') || title.includes('Tournament') ? (
+            <span className="text-xs px-2 py-0.5 bg-red-500/10 text-red-500 rounded-full border border-red-500/20">🥋 Karate</span>
+          ) : title.includes('Social') || title.includes('Fresh Anonna') ? (
+            <span className="text-xs px-2 py-0.5 bg-pink-500/10 text-pink-500 rounded-full border border-pink-500/20">❤️ Social Work</span>
+          ) : title.includes('Student') || title.includes('Academic') ? (
+            <span className="text-xs px-2 py-0.5 bg-blue-500/10 text-blue-500 rounded-full border border-blue-500/20">📚 Academic</span>
+          ) : title.includes('Travel') ? (
+            <span className="text-xs px-2 py-0.5 bg-green-500/10 text-green-500 rounded-full border border-green-500/20">✈️ Travel</span>
+          ) : null}
+        </div>
         
         <h3 className="font-display text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-all duration-300 group-hover:translate-x-1">
           {title}
